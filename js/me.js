@@ -111,12 +111,14 @@ window.addEventListener("scroll", () => {
   });
 });
 ////////////////////////////////////////////////////////////
+let btnSound = document.getElementById("audio5");
 // make overlay img to view
 let overlay = document.querySelector(".overlay-img");
 let overlayImg = document.querySelector(".overlay-img img");
 let view = document.querySelectorAll(".view");
 view.forEach((ele) => {
   ele.addEventListener("click", () => {
+    btnSound.play();
     overlayImg.src = ele.parentNode.children[0].src;
     overlay.classList.remove("hide-overlay");
   });
@@ -129,7 +131,7 @@ overlay.addEventListener("click", () => {
 /////////////////
 //fillter portfolio
 let portfolioBox = document.querySelectorAll(".portfolio-box");
-let btnSound = document.getElementById("audio5");
+
 let hidePortfolioBox = document.querySelectorAll(".hide-portfolio-box");
 let all = document.querySelector(".all-btn");
 let web = document.querySelector(".web-btn");
