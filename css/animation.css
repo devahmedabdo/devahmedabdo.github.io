@@ -1,0 +1,30 @@
+@keyframes stars {
+  70%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    left: -52%;
+    top: 99%;
+  }
+}
+@keyframes stars2 {
+  70%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    left: 5%;
+    top: 108%;
+  }
+}
+@keyframes stars3 {
+  70%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    left: 60%;
+    top: 110%;
+  }
+}
