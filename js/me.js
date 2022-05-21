@@ -41,6 +41,8 @@ function erase() {
   }
 }
 window.onload = function () {
+  let onload = document.querySelector(".onloading");
+  onload.classList.add("hide-onload");
   setTimeout(() => {
     document.querySelector(".my-img img").classList.remove("uReveal");
   }, 400);

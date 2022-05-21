@@ -465,11 +465,11 @@ header .container nav ul li:hover a {
 /* ///////////////onload classes///////// */
 .onlanding .left-link li {
   position: relative;
-  transform: translateY(-500px);
+  transform: translateX(-200px);
 }
 .onlanding .right-link li {
   position: relative;
-  transform: translateY(-500px);
+  transform: translateX(200px);
 }
 header .container nav .ul li {
   position: relative;
@@ -796,7 +796,7 @@ header .container nav .ul li {
   border-radius: 10%;
   height: 200px;
   transition: var(--mid-duration);
-  box-shadow: -2px 2px 7px #000000b3;
+  box-shadow: -2px 2px 7px #00000066;
   cursor: url(../images/cursor/curso-pointerr.png), default;
 }
 
@@ -999,71 +999,102 @@ header .container nav .ul li {
 }
 
 /* eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeend button */
-/* on load ......................... */
-.loader-wrapper {
+.onloading {
+  background-color: #9a9a9a;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--bg-color);
+  position: fixed;
+  top: 0%;
+  z-index: 1000;
+  transition: var(--long-duration);
+}
+.onloading .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.onloading .container svg {
+  max-width: 420px;
+}
+.onloading .svg2 path {
+  fill-opacity: 0;
+  animation: load 2s ease-in forwards 0s;
+}
+.onloading .svg4 path {
+  fill-opacity: 0;
+  animation: load 2s ease-in forwards 1s;
+}
+.onloading .svg3 path {
+  fill-opacity: 0;
+  animation: load 2s ease-in forwards 2s;
+}
+.onloading .svg1 path {
+  fill-opacity: 0;
+  animation: load 2s ease-in forwards 3s;
+}
+@keyframes load {
+  100% {
+    fill-opacity: 1;
+  }
+}
+.hi {
+  margin-top: -60px;
+  font-size: 50px;
+  margin-bottom: 60px;
+  opacity: 0;
+  color: #323232;
+  animation: hi 1s linear 4s forwards;
+}
+@keyframes hi {
+  100% {
+    opacity: 1;
+  }
+}
+.onloading .circls {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
 }
-.loader {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  position: relative;
-  border: 4px solid var(--font-color);
-  animation: loader 2s infinite ease;
-  border-radius: 4px;
+.onloading .circls div {
+  width: 20px;
+  background-color: #323232;
+  transform: scale(0);
+  border-radius: 50px;
+  height: 20px;
+  animation: circls 0.5s linear infinite alternate;
 }
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: var(--font-color);
-  animation: loader-inner 2s infinite ease-in;
+.onloading .circls .circle1 {
+  animation-delay: 6.1s;
 }
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
+.onloading .circls .circle2 {
+  animation-delay: 6.2s;
+}
+.onloading .circls .circle3 {
+  animation-delay: 6.3s;
+}
+.onloading .circls .circle4 {
+  animation-delay: 6.4s;
+}
+.onloading .circls .circle5 {
+  animation-delay: 6.5s;
+}
+@keyframes circls {
   100% {
-    transform: rotate(360deg);
+    transform: scale(1);
   }
 }
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
+/* on load ......................... */
+
 @media (max-width: 768px) {
   a {
     cursor: default !important;
   }
+}
+.hide-onload {
+  opacity: 0;
+  z-index: -1000;
+}
+.fix-float {
+  clear: both;
 }
