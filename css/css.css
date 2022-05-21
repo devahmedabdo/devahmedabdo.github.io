@@ -859,6 +859,7 @@ header .container nav .ul li {
 /* ///// contact////////////////// */
 .contact {
   padding-top: 100px;
+  overflow: hidden;
 }
 .contact .container {
   display: flex;
