@@ -121,10 +121,7 @@ header {
   transition: var(--mid-duration);
   z-index: 999;
 }
-.header {
-  opacity: 0;
-  z-index: -999;
-}
+
 header .container {
   display: flex;
   justify-content: center;
@@ -475,6 +472,14 @@ header .container nav .ul li {
   position: relative;
   transform: translateY(60px);
 }
+.header {
+  opacity: 0;
+  z-index: -999;
+}
+.header .container nav ul li {
+  position: relative;
+  transform: translateY(60px);
+}
 /* ////////////////////////////////////////////////////////////////////// */
 /* start skills  */
 
@@ -594,11 +599,10 @@ header .container nav .ul li {
   stroke-width: 10px;
   stroke-dasharray: 500px;
   stroke-dashoffset: 500px;
-  transition: all var(--long-duration);
+  transition: all var(--vlong-duration);
 }
 .skills .box.on-view circle {
   stroke-dasharray: var(--skills-persentage);
-  transition: all var(--long-duration);
 }
 
 .skills .box > svg {
@@ -1006,7 +1010,7 @@ header .container nav .ul li {
   position: fixed;
   top: 0%;
   z-index: 1000;
-  transition: var(--long-duration);
+  transition: var(--vlong-duration);
 }
 .onloading .container {
   display: flex;

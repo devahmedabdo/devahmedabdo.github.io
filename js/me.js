@@ -41,20 +41,24 @@ function erase() {
   }
 }
 window.onload = function () {
-  let onload = document.querySelector(".onloading");
-  onload.classList.add("hide-onload");
+  setTimeout(() => {
+    let onload = document.querySelector(".onloading");
+    onload.classList.add("hide-onload");
+  }, 4000);
+
   setTimeout(() => {
     document.querySelector(".my-img img").classList.remove("uReveal");
-  }, 400);
+  }, 4400);
+
   setTimeout(() => {
     document.querySelector(".ul").classList.remove("ul");
-  }, 1400);
+  }, 4600);
   setTimeout(() => {
     document.querySelector(".onlanding").classList.remove("onlanding");
     document.querySelectorAll(".my-menu li").forEach((ele) => {
       ele.style.transitionDelay = "0s";
     });
-  }, 1800);
+  }, 4800);
 
   setTimeout(function () {
     myName.style.borderRight = "2px solid var(--icon-color)";
