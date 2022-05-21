@@ -167,6 +167,7 @@ function setActiveBtn(btn) {
 let hideBtn = document.querySelector(".hide-btn");
 let contactUl = document.querySelector(".contact ul");
 hideBtn.addEventListener("click", () => {
+  btnSound.play();
   contactUl.classList.toggle("active");
 });
 window.addEventListener("scroll", () => {

@@ -1147,3 +1147,6 @@ footer h3 {
   opacity: 0;
   z-index: -1000;
 }
+.my-audio {
+  display: none;
+}
