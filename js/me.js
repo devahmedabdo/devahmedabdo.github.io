@@ -234,10 +234,10 @@ let portfolio = document.getElementById("portfolio");
 let portfolioLink = document.getElementById("portfolioLink");
 let contact = document.getElementById("contact");
 let contactLink = document.getElementById("contactLink");
-let footer = document.getElementById("footer");
-let footerLink = document.getElementById("footer");
+let footer = document.querySelector("footer");
+let footerLink = document.querySelector("footer h3");
 let myNav = document.querySelectorAll(".my-menu li");
-let myLink = [home, skills, services, portfolio, contact];
+let myLink = [home, skills, services, portfolio, contact, footer];
 let myLinkGroup = [
   homeLink,
   skillsLink,
@@ -251,6 +251,7 @@ skills.link = skillsLink;
 services.link = servicesLink;
 contact.link = contactLink;
 portfolio.link = portfolioLink;
+footer.link = footerLink;
 
 window.addEventListener("scroll", () => {
   myLink.forEach(function (ele) {
