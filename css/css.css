@@ -776,6 +776,7 @@ header .container nav .ul li {
   color: var(--font-color);
   transition: var(--mid-duration);
   box-shadow: -2px 2px 7px #00000026;
+  cursor: url(../images/cursor/curso-pointerr.png), default;
 }
 .portfolio .container .buttons button:hover,
 .portfolio .container .buttons .active {

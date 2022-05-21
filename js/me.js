@@ -129,6 +129,7 @@ overlay.addEventListener("click", () => {
 /////////////////
 //fillter portfolio
 let portfolioBox = document.querySelectorAll(".portfolio-box");
+let btnSound = document.getElementById("audio5");
 let hidePortfolioBox = document.querySelectorAll(".hide-portfolio-box");
 let all = document.querySelector(".all-btn");
 let web = document.querySelector(".web-btn");
@@ -137,6 +138,7 @@ let cv = document.querySelector(".cv-btn");
 let myBtns = [all, web, graphic, cv];
 myBtns.map((ele) => {
   ele.addEventListener("click", () => {
+    btnSound.play();
     setActiveBtn(ele);
     portfolioBox.forEach((e) => {
       e.classList.add("hide-portfolio-box");
@@ -176,6 +178,8 @@ window.addEventListener("scroll", () => {
 });
 ////////////////////////////////////////////////////////////
 //hide header
+let hideSound = document.getElementById("audio2");
+let showSound = document.getElementById("audio3");
 let hideHeader = document.querySelector(".fa-eye-slash");
 let showHeader = document.querySelector(".fa-eye");
 let header = document.querySelector("header");
@@ -183,14 +187,18 @@ showHeader.addEventListener("click", () => {
   showHeader.classList.toggle("toggle-i");
   hideHeader.classList.toggle("toggle-i");
   header.classList.remove("header");
+  hideSound.play();
 });
 hideHeader.addEventListener("click", () => {
+  showSound.play();
   showHeader.classList.toggle("toggle-i");
   hideHeader.classList.toggle("toggle-i");
   header.classList.add("header");
 });
 ////////////////////////////////////////////////////////////
 //hide to top btn
+
+let toTopBtnSound = document.getElementById("audio1");
 let toTopBtn = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
@@ -198,6 +206,9 @@ window.addEventListener("scroll", () => {
   } else {
     toTopBtn.classList.remove("active-up-btn");
   }
+});
+toTopBtn.addEventListener("click", () => {
+  toTopBtnSound.play();
 });
 ////////////////////////////////////////////////////////////
 // make elemets reveal
@@ -271,8 +282,8 @@ function onview(link) {
     link.classList.add("active-nav");
   });
 }
-
 //add active-nav class on click
+let clickSound = document.getElementById("audio4");
 function setActive(link) {
   myNav.forEach(function (e) {
     e.classList.remove("active-nav");
@@ -281,6 +292,7 @@ function setActive(link) {
 }
 myLinkGroup.forEach((ele) => {
   ele.addEventListener("click", () => {
+    clickSound.play();
     setActive(ele);
   });
 });
