@@ -1008,6 +1008,7 @@ footer {
   padding-top: 20px;
   padding-bottom: 80px;
   background-color: #00000070;
+  overflow: hidden;
 }
 footer .container {
   display: flex;
@@ -1032,6 +1033,7 @@ footer .container {
   min-width: 300px;
   line-height: 20px;
   gap: 20px;
+  padding: 40px 0px;
 }
 .footer-content h2 {
   color: var(--white-color);
