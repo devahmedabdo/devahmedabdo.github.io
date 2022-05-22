@@ -155,7 +155,7 @@ myBtns.map((ele) => {
       document.querySelectorAll(".hide-portfolio-box").forEach((ele) => {
         ele.style.cssText = "display:none";
       });
-    }, 200);
+    }, 300);
   });
 });
 
