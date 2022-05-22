@@ -5,7 +5,7 @@ let iAmText = "I'm";
 ///
 let myJop = document.getElementById("jop-title");
 let typingSpeed = 150;
-let delayOne = typingSpeed * myNameText.length + 4000;
+let delayOne = typingSpeed * myNameText.length + 7000;
 let delayTwo = 500 + delayOne + typingSpeed * iAmText.length;
 ////
 
@@ -71,7 +71,7 @@ window.onload = function () {
         myName.style.border = "none";
       }
     }, typingSpeed);
-  }, 4000);
+  }, 7000);
   /////////////
 
   setTimeout(() => {
