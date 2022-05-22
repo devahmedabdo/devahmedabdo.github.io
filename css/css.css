@@ -25,7 +25,22 @@ html {
   font-display: swap;
   font-style: normal;
 }
-
+::-webkit-scrollbar {
+  background-color: var(--icon-color);
+  border-radius: 50px;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  box-shadow: 0px -26px 70px var(--font-color), 0px -26px 21px var(--font-color),
+    0px -26px 10px var(--font-color), 0px -26px 6px var(--font-color);
+  background: linear-gradient(
+    0deg,
+    var(--white-color) 0%,
+    var(--font-color) 50%,
+    var(--font-color) 100%
+  );
+}
 *::selection {
   background: var(--font-color);
   color: var(--bg-color);
@@ -1141,6 +1156,15 @@ footer h3 {
 @media (max-width: 768px) {
   a {
     cursor: default !important;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  footer h3 {
+    font-size: 14px;
   }
 }
 .hide-onload {
