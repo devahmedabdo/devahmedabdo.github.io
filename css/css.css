@@ -810,12 +810,12 @@ header .container nav .ul li {
 
 .portfolio .container .portfolio-content .portfolio-box {
   display: block;
-  max-width: 200px;
+  width: 200px;
   position: relative;
   overflow: hidden;
   border-radius: 10%;
   height: 200px;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
   box-shadow: -2px 2px 7px #00000066;
   cursor: url(../images/cursor/curso-pointerr.png), default;
 }
@@ -869,7 +869,8 @@ header .container nav .ul li {
 }
 /* ///// filter classes*/
 .portfolio .container .portfolio-content .hide-portfolio-box {
-  transform: scale(0);
+  width: 0px;
+  height: 0px;
   opacity: 0;
 }
 /* ///// contact////////////////// */
