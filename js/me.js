@@ -125,9 +125,9 @@ view.forEach((ele) => {
 });
 
 // hide overlay
-overlay.addEventListener("click", () => {
-  overlay.classList.add("hide-overlay");
-});
+// overlay.addEventListener("click", () => {
+//   overlay.classList.add("hide-overlay");
+// });
 /////////////////
 //fillter portfolio
 let portfolioBox = document.querySelectorAll(".portfolio-box");
