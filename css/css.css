@@ -815,7 +815,6 @@ header .container nav .ul li {
   position: relative;
   overflow: hidden;
   border-radius: 10%;
-  opacity: 1;
   height: 200px;
   transition: var(--long-duration);
   box-shadow: -2px 2px 7px #00000066;
