@@ -1,4 +1,4 @@
-html {
+:root {
   --bg-color: #0f202d;
   --font-color: #8ebcbd;
   --div-color: #003444;
@@ -18,6 +18,29 @@ html {
   --branch-font: "Poppins";
   --stop-color1: #8ebcbd;
   --stop-color2: #0088b2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f202d;
+    --font-color: #8ebcbd;
+    --div-color: #003444;
+    --icon-color: #386b74;
+    --white-color: #f8fcfc;
+    --nav-bg-color: #0034444d;
+    --nav-icon-bg-color: #386b7482;
+    --text-shadow: #f8fcfc70;
+    --small-duration: 0.2s;
+    --mid-duration: 0.3s;
+    --vlong-duration: 1s;
+    --long-duration: 0.5s;
+    --nav-height: 50px;
+    --box-shadow: -4px -4px 6px rgb(255 255 255 / 15%),
+      6px 6px 20px rgb(0 0 0 / 40%);
+    --main-font: "Teko";
+    --branch-font: "Poppins";
+    --stop-color1: #8ebcbd;
+    --stop-color2: #0088b2;
+  }
 }
 @font-face {
   font-family: "leigo";
