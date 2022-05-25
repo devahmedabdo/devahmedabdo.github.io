@@ -285,7 +285,7 @@ header .container nav ul li:hover a {
 @media (max-width: 387px) {
   .landing .right-link .header-btn {
     display: block;
-    top: -328px;
+    top: -250px;
     right: -25px;
   }
 }
@@ -445,6 +445,11 @@ header .container nav ul li:hover a {
   margin: 0%;
   padding-right: 5px;
   min-height: 46px;
+}
+@media (max-width: 495px) {
+  .landing h1 {
+    font-size: 24px;
+  }
 }
 .landing h2 {
   font-size: 30px;
@@ -1054,6 +1059,7 @@ footer {
   overflow: hidden;
 }
 footer .container {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
