@@ -113,21 +113,21 @@ window.addEventListener("scroll", () => {
 ////////////////////////////////////////////////////////////
 let btnSound = document.getElementById("audio5");
 // make overlay img to view
-// let overlay = document.querySelector(".overlay-img");
-// let overlayImg = document.querySelector(".overlay-img img");
-// let view = document.querySelectorAll(".view");
-// view.forEach((ele) => {
-//   ele.addEventListener("click", () => {
-//     btnSound.play();
-//     overlayImg.src = ele.parentNode.children[0].src;
-//     overlay.classList.remove("hide-overlay");
-//   });
-// });
+let overlay = document.querySelector(".overlay-img");
+let overlayImg = document.querySelector(".overlay-img img");
+let view = document.querySelectorAll(".view");
+view.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    btnSound.play();
+    overlayImg.src = ele.parentNode.children[0].src;
+    overlay.classList.remove("hide-overlay");
+  });
+});
 
 // hide overlay
-// overlay.addEventListener("click", () => {
-//   overlay.classList.add("hide-overlay");
-// });
+overlay.addEventListener("click", () => {
+  overlay.classList.add("hide-overlay");
+});
 /////////////////
 //fillter portfolio
 let portfolioBox = document.querySelectorAll(".portfolio-box");
