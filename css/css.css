@@ -18,6 +18,7 @@
   --branch-font: "Poppins";
   --stop-color1: #8ebcbd;
   --stop-color2: #0088b2;
+color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
