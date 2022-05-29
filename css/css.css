@@ -18,7 +18,7 @@
   --branch-font: "Poppins";
   --stop-color1: #8ebcbd;
   --stop-color2: #0088b2;
-color-scheme: light dark;
+  color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -848,6 +848,25 @@ header .container nav .ul li {
   transition: var(--long-duration);
   box-shadow: -2px 2px 7px #00000066;
   cursor: url(../images/cursor/curso-pointerr.png), default;
+}
+.portfolio .container .portfolio-content .portfolio-box::after {
+  content: var(--title);
+  color: var(--white-color);
+  width: 0px;
+  transition: var(--mid-duration);
+  position: absolute;
+  top: 20%;
+  transition-delay: 0.2s;
+  left: 50%;
+  height: 18px;
+  word-break: break-all;
+  overflow: hidden;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: capitalize;
+}
+.portfolio .container .portfolio-content .portfolio-box:hover::after {
+  width: 140px;
 }
 
 .portfolio-box img {
