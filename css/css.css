@@ -80,27 +80,27 @@ body {
 .rReveal {
   transform: translateX(70px) translateY(0px);
   opacity: 0;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
 }
 .lReveal {
   transform: translateX(-70px) translateY(0px);
   opacity: 0;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
 }
 .uReveal {
   transform: translateY(-70px) translateX(0px);
   opacity: 0;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
 }
 .dReveal {
   transform: translateY(70px) translateX(0px);
   opacity: 0;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
 }
 .reveal {
   transform: translateX(0px) translateY(0px);
   opacity: 1;
-  transition: var(--mid-duration);
+  transition: var(--long-duration);
 }
 
 /* ////////////////////////////////////////////////////////////////////// */
@@ -110,29 +110,29 @@ body {
   height: 100%;
   z-index: -1;
 }
+.images-in-back img {
+  position: absolute;
+  transition-delay: opacity 1s;
+}
 .images-in-back img:first-child {
   opacity: 0.3;
-  position: absolute;
   top: -1%;
   left: -34%;
 }
 .images-in-back img:nth-child(2) {
   opacity: 0.1;
-  position: absolute;
   top: -1%;
   right: -34%;
   width: 50%;
 }
 .images-in-back img:nth-child(3) {
   opacity: 0.4;
-  position: absolute;
   top: 59%;
   right: -34%;
   width: 65%;
 }
 .images-in-back svg:first-child {
   top: 20%;
-  position: absolute;
   left: -20%;
   opacity: 0.3;
   max-width: 630px;
@@ -331,7 +331,7 @@ header .container nav ul li:hover a {
   transition: var(--mid-duration) ease-in calc(0.1s * var(--delay));
 }
 /* ///////////////////// stars on landing        ////////////////////// */
-.landing .stars {
+.stars {
   width: 4px;
   position: absolute;
   height: 30px;
@@ -350,47 +350,47 @@ header .container nav ul li:hover a {
   filter: blur(1px);
 }
 
-.landing .span-1,
-.landing .span-3 {
+.span-1,
+.span-3 {
   left: 15%;
   top: -5%;
   animation: stars 5s infinite linear;
 }
 
-.landing .span-2,
-.landing .span-4 {
+.span-2,
+.span-4 {
   left: 69%;
   top: -30%;
   animation: stars2 5s infinite linear;
 }
 
 @media (max-width: 500px) {
-  .landing .span-1,
+  .span-1,
   .landing .span-3 {
     left: 105%;
   }
-  .landing .span-2,
-  .landing .span-4 {
+  .span-2,
+  .span-4 {
     left: 169%;
   }
 }
-.landing .span-3 {
+.span-3 {
   animation-delay: 2s;
 }
-.landing .span-4 {
+.span-4 {
   animation-delay: 2s;
 }
-.landing .span-5 {
+.span-5 {
   left: 120%;
   top: -20%;
   animation: stars3 5s infinite linear;
 }
 
-.landing .span-1::after,
-.landing .span-2::after,
-.landing .span-3::after,
-.landing .span-4::after,
-.landing .span-5::after {
+.span-1::after,
+.span-2::after,
+.span-3::after,
+.span-4::after,
+.span-5::after {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -405,11 +405,11 @@ header .container nav ul li:hover a {
   border-radius: 100px;
   content: "";
 }
-.landing .span-1::before,
-.landing .span-2::before,
-.landing .span-3::before,
-.landing .span-4::before,
-.landing .span-5::before {
+.span-1::before,
+.span-2::before,
+.span-3::before,
+.span-4::before,
+.span-5::before {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -945,7 +945,9 @@ header .container nav .ul li {
 }
 .contact-img {
   max-width: 50%;
+  position: relative;
   min-width: 300px;
+  animation: upDown 2s ease-in-out infinite alternate;
 }
 .contact-img img {
   width: 100%;
@@ -980,6 +982,7 @@ header .container nav .ul li {
   opacity: 0;
   transform: rotate(0deg) translateX(135px);
 }
+
 .contact-content ul li a {
   font-size: 40px;
   color: var(--font-color);
@@ -987,7 +990,7 @@ header .container nav .ul li {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  transform: rotate(calc(360deg / -8 * var(--i)));
+  transform: rotate(calc(360deg / -8 * var(--i))) perspective(1px) translateZ(0);
   transition: var(--mid-duration);
   cursor: url(../images/cursor/curso-pointerr.png), default;
 }
@@ -996,6 +999,7 @@ header .container nav .ul li {
   color: var(--white-color);
   text-shadow: 0px 0px 44px #00d5ff7d;
   filter: drop-shadow(0px 0px 16px #00d5ff33);
+  animation: buzz-out var(--long-duration) linear;
 }
 .contact-content ul.active li {
   transform: rotate(calc(360deg / 8 * var(--i)));

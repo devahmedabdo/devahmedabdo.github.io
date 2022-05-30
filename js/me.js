@@ -1,4 +1,3 @@
-
 ///////
 let myName = document.querySelector(".my-name");
 let myNameText = "Hello I'm Ahmed Abdo";
@@ -175,7 +174,7 @@ hideBtn.addEventListener("click", () => {
   contactUl.classList.toggle("active");
 });
 window.addEventListener("scroll", () => {
-  if (hideBtn.getBoundingClientRect().top < 500) {
+  if (hideBtn.getBoundingClientRect().top < 800) {
     contactUl.classList.add("active");
   } else {
     contactUl.classList.remove("active");
