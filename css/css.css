@@ -127,7 +127,7 @@ body {
 }
 .images-in-back img:nth-child(3) {
   opacity: 0.4;
-  top: 59%;
+  top: 45%;
   right: -34%;
   width: 65%;
 }
@@ -799,6 +799,8 @@ header .container nav .ul li {
 .portfolio {
   position: relative;
   overflow: hidden;
+  padding-bottom: 500px;
+  margin-bottom: -248px;
 }
 .portfolio .container {
   display: flex;
@@ -834,12 +836,12 @@ header .container nav .ul li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
   justify-content: center;
   align-self: flex-start;
 }
 
 .portfolio .container .portfolio-content .portfolio-box {
+  margin: 10px;
   display: block;
   width: 200px;
   position: relative;
@@ -921,12 +923,14 @@ header .container nav .ul li {
 .portfolio .container .portfolio-content .hide-portfolio-box {
   width: 0px;
   height: 0px;
+  margin: 0%;
   opacity: 0;
   transition: var(--long-duration);
 }
 /* ///// contact////////////////// */
 .contact {
   padding-top: 100px;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 .contact .container {

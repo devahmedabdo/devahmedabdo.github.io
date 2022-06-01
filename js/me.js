@@ -149,14 +149,10 @@ myBtns.map((ele) => {
 
     document.querySelectorAll(`.${ele.getAttribute("type")}`).forEach((ele) => {
       ele.classList.remove("hide-portfolio-box");
-      ele.style.cssText = "display:block";
     });
-
     setTimeout(() => {
-      document.querySelectorAll(".hide-portfolio-box").forEach((ele) => {
-        ele.style.cssText = "display:none";
-      });
-    }, 500);
+      makeReveal(dReveal);
+    }, 222);
   });
 });
 
@@ -238,7 +234,7 @@ window.addEventListener("scroll", function () {
   });
 });
 
-/////////////////////add active-nav class on pageofset
+/////////////////////add active-nav class on pageoffset
 let home = document.getElementById("home");
 let homeLink = document.getElementById("homeLink");
 let skills = document.getElementById("skills");
@@ -288,15 +284,8 @@ function onview(link) {
 }
 //add active-nav class on click
 let clickSound = document.getElementById("audio4");
-function setActive(link) {
-  myNav.forEach(function (e) {
-    e.classList.remove("active-nav");
-    link.classList.add("active-nav");
-  });
-}
 myLinkGroup.forEach((ele) => {
   ele.addEventListener("click", () => {
     clickSound.play();
-    setActive(ele);
   });
 });
