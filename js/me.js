@@ -289,3 +289,5 @@ myLinkGroup.forEach((ele) => {
     clickSound.play();
   });
 });
+/////all rightreserved
+document.querySelector("footer h3 span").innerHTML = new Date().getFullYear();

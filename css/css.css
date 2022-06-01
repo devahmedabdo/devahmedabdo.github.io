@@ -1093,6 +1093,7 @@ footer .container {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 90px);
 }
 .footer-img {
   max-width: 30%;
@@ -1121,10 +1122,11 @@ footer .container {
   color: var(--font-color);
 }
 footer h3 {
-  border-top: 2px solid var(--font-color);
+  border-top: 1px solid var(--font-color);
   text-align: center;
   padding-top: 10px;
   text-transform: uppercase;
+  font-family: Arial, Tahoma;
 }
 /* eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeend  */
 .onloading {
