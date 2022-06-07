@@ -116,13 +116,13 @@ body {
 }
 .images-in-back img:first-child {
   opacity: 0.3;
-  top: -1%;
-  left: -34%;
+  top: -2px;
+  left: -550px;
 }
 .images-in-back img:nth-child(2) {
   opacity: 0.1;
-  top: -1%;
-  right: -34%;
+  top: -5px;
+  right: -390px;
   width: 50%;
 }
 .images-in-back img:nth-child(3) {
@@ -1031,6 +1031,7 @@ header .container nav .ul li {
 .hide-overlay {
   z-index: -99;
   opacity: 0;
+  transform: scale(0);
 }
 .overlay-img .container img {
   max-width: 100%;

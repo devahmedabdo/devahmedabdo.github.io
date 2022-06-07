@@ -94,7 +94,7 @@ window.onload = function () {
 // set skills progress
 function setProgrss() {
   let myCircle = document.querySelectorAll(".progress-circle");
-  Array.from(myCircle).map(function (e) {
+  myCircle.forEach(function (e) {
     let myProgress = e.getAttribute("progress");
     e.style = `--skills-persentage:${myProgress * 3.4 + 500}px`;
   });
@@ -120,7 +120,7 @@ let view = document.querySelectorAll(".view");
 view.forEach((ele) => {
   ele.addEventListener("click", () => {
     btnSound.play();
-    overlayImg.src = ele.parentNode.children[0].src;
+    overlayImg.src = ele.previousElementSibling.src;
     overlay.classList.remove("hide-overlay");
   });
 });
@@ -134,12 +134,8 @@ overlay.addEventListener("click", () => {
 let portfolioBox = document.querySelectorAll(".portfolio-box");
 
 let hidePortfolioBox = document.querySelectorAll(".hide-portfolio-box");
-let all = document.querySelector(".all-btn");
-let web = document.querySelector(".web-btn");
-let graphic = document.querySelector(".graphic-btn");
-let cv = document.querySelector(".cv-btn");
-let myBtns = [all, web, graphic, cv];
-myBtns.map((ele) => {
+let myBtns = document.querySelectorAll(".buttons button");
+myBtns.forEach((ele) => {
   ele.addEventListener("click", () => {
     btnSound.play();
     setActiveBtn(ele);
@@ -149,10 +145,8 @@ myBtns.map((ele) => {
 
     document.querySelectorAll(`.${ele.getAttribute("type")}`).forEach((ele) => {
       ele.classList.remove("hide-portfolio-box");
+      ele.classList.add("reveal");
     });
-    setTimeout(() => {
-      makeReveal(dReveal);
-    }, 222);
   });
 });
 
@@ -178,23 +172,16 @@ window.addEventListener("scroll", () => {
 });
 ////////////////////////////////////////////////////////////
 //hide header
-let hideSound = document.getElementById("audio2");
-let showSound = document.getElementById("audio3");
-let hideHeader = document.querySelector(".fa-eye-slash");
-let showHeader = document.querySelector(".fa-eye");
-let header = document.querySelector("header");
-showHeader.addEventListener("click", () => {
-  showHeader.classList.toggle("toggle-i");
-  hideHeader.classList.toggle("toggle-i");
-  header.classList.remove("header");
-  hideSound.play();
-});
-hideHeader.addEventListener("click", () => {
-  showSound.play();
-  showHeader.classList.toggle("toggle-i");
-  hideHeader.classList.toggle("toggle-i");
-  header.classList.add("header");
-});
+for (let btn of document.querySelectorAll(".header-btn i")) {
+  btn.onclick = () => {
+    for (let btn of document.querySelectorAll(".header-btn i")) {
+      btn.classList.toggle("toggle-i");
+    }
+    document.querySelector("header").classList.toggle("header");
+    document.getElementById(btn.getAttribute("sound")).play();
+  };
+}
+
 ////////////////////////////////////////////////////////////
 //hide to top btn
 
@@ -212,65 +199,35 @@ toTopBtn.addEventListener("click", () => {
 });
 ////////////////////////////////////////////////////////////
 // make elemets reveal
-let lReveal = document.querySelectorAll(".lReveal");
-let rReveal = document.querySelectorAll(".rReveal");
-let uReveal = document.querySelectorAll(".uReveal");
-let dReveal = document.querySelectorAll(".dReveal");
-let myAnimation = [lReveal, rReveal, uReveal, dReveal];
-
-function makeReveal(divClass) {
-  divClass.forEach((ele) => {
-    if (ele.getBoundingClientRect().top < 600) {
-      ele.classList.add("reveal");
-    } else {
-      ele.classList.remove("reveal");
-    }
-  });
+let myAnimation = document.querySelectorAll(
+  "*.lReveal , *.rReveal ,*.uReveal,*.dReveal"
+);
+function makeReveal(element) {
+  if (element.getBoundingClientRect().top < 600) {
+    element.classList.add("reveal");
+  } else {
+    element.classList.remove("reveal");
+  }
 }
 
 window.addEventListener("scroll", function () {
-  myAnimation.map(function (e) {
+  myAnimation.forEach(function (e) {
     makeReveal(e);
   });
 });
 
 /////////////////////add active-nav class on pageoffset
-let home = document.getElementById("home");
-let homeLink = document.getElementById("homeLink");
-let skills = document.getElementById("skills");
-let skillsLink = document.getElementById("skillsLink");
-let services = document.getElementById("services");
-let servicesLink = document.getElementById("servicesLink");
-let portfolio = document.getElementById("portfolio");
-let portfolioLink = document.getElementById("portfolioLink");
-let contact = document.getElementById("contact");
-let contactLink = document.getElementById("contactLink");
-let footer = document.querySelector("footer");
-let footerLink = document.querySelector("footer h3");
-let myNav = document.querySelectorAll(".my-menu li");
-let myLink = [home, skills, services, portfolio, contact, footer];
-let myLinkGroup = [
-  homeLink,
-  skillsLink,
-  servicesLink,
-  contactLink,
-  portfolioLink,
-];
 
-home.link = homeLink;
-skills.link = skillsLink;
-services.link = servicesLink;
-contact.link = contactLink;
-portfolio.link = portfolioLink;
-footer.link = footerLink;
-
+let myNav = document.querySelectorAll("nav ul li");
+let myLink = document.querySelectorAll(".my-sections");
 window.addEventListener("scroll", () => {
   myLink.forEach(function (ele) {
     if (ele.getBoundingClientRect().top < 650) {
-      if (getComputedStyle(ele.link).display != "none") {
-        onview(ele.link);
-      } else {
-        return false;
+      if (
+        getComputedStyle(document.getElementById(ele.getAttribute("nav")))
+          .display != "none"
+      ) {
+        onview(document.getElementById(ele.getAttribute("nav")));
       }
     }
   });
@@ -284,7 +241,7 @@ function onview(link) {
 }
 //add active-nav class on click
 let clickSound = document.getElementById("audio4");
-myLinkGroup.forEach((ele) => {
+myNav.forEach((ele) => {
   ele.addEventListener("click", () => {
     clickSound.play();
   });
