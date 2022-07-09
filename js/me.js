@@ -166,8 +166,6 @@ hideBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   if (hideBtn.getBoundingClientRect().top < 800) {
     contactUl.classList.add("active");
-  } else {
-    contactUl.classList.remove("active");
   }
 });
 ////////////////////////////////////////////////////////////
