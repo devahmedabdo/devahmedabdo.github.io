@@ -112,46 +112,26 @@ window.addEventListener("scroll", () => {
   });
 });
 ////////////////////////////////////////////////////////////
-let btnSound = document.getElementById("audio5");
-// make overlay img to view
-let overlay = document.querySelector(".overlay-img");
-let overlayImg = document.querySelector(".overlay-img img");
-let view = document.querySelectorAll(".view");
-view.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    btnSound.play();
-    overlayImg.src = ele.previousElementSibling.src;
-    overlay.classList.remove("hide-overlay");
-  });
-});
 
-// hide overlay
-overlay.addEventListener("click", () => {
-  overlay.classList.add("hide-overlay");
-});
 /////////////////
 //fillter portfolio
-let portfolioBox = document.querySelectorAll(".portfolio-box");
-
-let hidePortfolioBox = document.querySelectorAll(".hide-portfolio-box");
+let portfolioContainer = document.querySelector(".portfolio-content");
+let portfolioBox = portfolioContainer.children;
 let myBtns = document.querySelectorAll(".buttons button");
 myBtns.forEach((ele) => {
   ele.addEventListener("click", () => {
-    btnSound.play();
-    setActiveBtn(ele);
-    portfolioBox.forEach((e) => {
+    setActiveBtn(myBtns, ele);
+    Array.from(portfolioBox).forEach((e) => {
       e.classList.add("hide-portfolio-box");
     });
-
     document.querySelectorAll(`.${ele.getAttribute("type")}`).forEach((ele) => {
       ele.classList.remove("hide-portfolio-box");
       ele.classList.add("reveal");
     });
   });
 });
-
-function setActiveBtn(btn) {
-  myBtns.forEach(function (e) {
+function setActiveBtn(arr, btn) {
+  arr.forEach(function (e) {
     e.classList.remove("active");
     btn.classList.add("active");
   });
@@ -160,7 +140,6 @@ function setActiveBtn(btn) {
 let hideBtn = document.querySelector(".hide-btn");
 let contactUl = document.querySelector(".contact ul");
 hideBtn.addEventListener("click", () => {
-  btnSound.play();
   contactUl.classList.toggle("active");
 });
 window.addEventListener("scroll", () => {
@@ -176,14 +155,12 @@ for (let btn of document.querySelectorAll(".header-btn i")) {
       btn.classList.toggle("toggle-i");
     }
     document.querySelector("header").classList.toggle("header");
-    document.getElementById(btn.getAttribute("sound")).play();
   };
 }
 
 ////////////////////////////////////////////////////////////
 //hide to top btn
 
-let toTopBtnSound = document.getElementById("audio1");
 let toTopBtn = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
@@ -192,35 +169,14 @@ window.addEventListener("scroll", () => {
     toTopBtn.classList.remove("active-up-btn");
   }
 });
-toTopBtn.addEventListener("click", () => {
-  toTopBtnSound.play();
-});
-////////////////////////////////////////////////////////////
-// make elemets reveal
-let myAnimation = document.querySelectorAll(
-  "*.lReveal , *.rReveal ,*.uReveal,*.dReveal"
-);
-function makeReveal(element) {
-  if (element.getBoundingClientRect().top < 600) {
-    element.classList.add("reveal");
-  } else {
-    element.classList.remove("reveal");
-  }
-}
 
-window.addEventListener("scroll", function () {
-  myAnimation.forEach(function (e) {
-    makeReveal(e);
-  });
-});
-
-/////////////////////add active-nav class on pageoffset
-
+///////////////////// add active-nav class on pageoffset
 let myNav = document.querySelectorAll("nav ul li");
 let myLink = document.querySelectorAll(".my-sections");
 window.addEventListener("scroll", () => {
   myLink.forEach(function (ele) {
     if (ele.getBoundingClientRect().top < 650) {
+      // this condition becuase i am hide some link on mobile screen
       if (
         getComputedStyle(document.getElementById(ele.getAttribute("nav")))
           .display != "none"
@@ -237,12 +193,73 @@ function onview(link) {
     link.classList.add("active-nav");
   });
 }
-//add active-nav class on click
-let clickSound = document.getElementById("audio4");
-myNav.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    clickSound.play();
+////
+let myGig = [];
+let req = new XMLHttpRequest();
+req.open("GET", "./../gig.json");
+req.send();
+req.onreadystatechange = async function () {
+  if (this.readyState === 4 && this.status === 200) {
+    try {
+      myGig = await JSON.parse(req.response);
+      myGig.forEach((ele) => {
+        let box = document.createElement("div");
+        box.style = `--title:${ele.title}`;
+        box.classList.add("dReveal", "portfolio-box", `${ele.class}`);
+        box.innerHTML = `<img src="images/works/${ele.image}" alt="${ele.altImage}" />
+        <div class="view">
+          <lord-icon src="https://cdn.lordicon.com/zbopvjaq.json" trigger="loop" delay="1000"
+            colors="primary:#f8fcfc,secondary:#f8fcfc" style="width: 100px; height: 100px">
+          </lord-icon>
+        </div>
+        <a class="to-demo" target="_blank" href="${ele.link}"><i
+            class="fa-solid fa-link"></i></a>`;
+        portfolioContainer.appendChild(box);
+      });
+      // make overlay img to view
+      let overlay = document.querySelector(".overlay-img");
+      let overlayImg = document.querySelector(".overlay-img img");
+      let view = document.querySelectorAll(".view");
+      view.forEach((ele) => {
+        ele.addEventListener("click", () => {
+          overlayImg.src = ele.previousElementSibling.src;
+          overlay.classList.remove("hide-overlay");
+        });
+      });
+      // hide overlay
+      overlay.addEventListener("click", () => {
+        overlay.classList.add("hide-overlay");
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+};
+
+// intractive with click
+let soundBtns = document.querySelectorAll("[data-sound]");
+soundBtns.forEach((e) => {
+  e.addEventListener("click", () => {
+    document.getElementById(`${e.getAttribute("data-sound")}`).play();
   });
 });
 /////all rightreserved
 document.querySelector("footer h3 span").innerHTML = new Date().getFullYear();
+////
+// make elemets reveal
+function makeReveal(element) {
+  if (element.getBoundingClientRect().top < 600) {
+    element.classList.add("reveal");
+  } else {
+    element.classList.remove("reveal");
+  }
+}
+
+window.addEventListener("scroll", function () {
+  let myAnimation = document.querySelectorAll(
+    "*.lReveal , *.rReveal ,*.uReveal,*.dReveal"
+  );
+  myAnimation.forEach(function (e) {
+    makeReveal(e);
+  });
+});

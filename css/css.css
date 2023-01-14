@@ -654,7 +654,7 @@ header .container nav .ul li {
   transform: rotate(270deg);
   width: 100px;
   height: 100px;
-  overflow: overlay;
+  overflow: visible;
   position: absolute;
 }
 .skills .box svg:nth-child(2) {
@@ -1034,7 +1034,7 @@ header .container nav .ul li {
   transform: scale(0);
 }
 .overlay-img .container img {
-  max-width: 100%;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 1px 1px 20px 2px black;
 }
