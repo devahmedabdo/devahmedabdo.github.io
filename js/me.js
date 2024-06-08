@@ -96,6 +96,8 @@ window.onload = function () {
 
   /////////////
 
+  /////////////
+
   /////////
   setTimeout(typing, delayTwo);
 };
@@ -299,22 +301,7 @@ req.onreadystatechange = async function () {
     }
   }
 };
-fetch("./../gig.json", { method: "GET" })
-  .then(async (response) => {
-    await response.json();
-  })
-  .then((projects) => console.log(projects))
-  .catch((error) => console.log(error));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 // intractive with click
 let soundBtns = document.querySelectorAll("[data-sound]");
 soundBtns.forEach((e) => {
