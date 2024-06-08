@@ -1,0 +1,296 @@
+{
+  "Projects": [
+    {
+      "title": "'Logo Design'",
+      "image": "graphic design 10.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144260039/DMC-logo?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 1.webp",
+      "altImage": "SCAUA Website",
+      "link": "https://devahmedabdo.github.io/specialchemistry",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 2.webp",
+      "altImage": "DMC Website",
+      "link": "https://devahmedabdo.github.io/dmc",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 3.webp",
+      "altImage": "Eltarek Lap Patient Wait System",
+      "link": "https://devahmedabdo.github.io/Eltarek/",
+      "class": "web-design"
+    },
+
+    {
+      "title": "'Web Design'",
+      "image": "web design 4.webp",
+      "altImage": "The Food Court Website",
+      "link": "https://devahmedabdo.github.io/The-Food-Court/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 5.webp",
+      "altImage": "Sword-Capital Website",
+      "link": "https://devahmedabdo.github.io/Sword-Capital/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 6.webp",
+      "altImage": "QR Code Tool",
+      "link": "https://devahmedabdo.github.io/QR-Code/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 2.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/124169757/African-Nation?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 6.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144260673/social-media?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 8.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144259863/BMW-Ad?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 7.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144259843/twitter-cover?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 8.webp",
+      "altImage": "Zedy Company Website",
+      "link": "http://z-edy.com/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "frameskirt.webp",
+      "altImage": "frameskirt Website",
+      "link": "https://framskrit-nu.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "dmc-panel.webp",
+      "altImage": "dmc-panel Website",
+      "link": "https://dmc-cpanel.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "aurlius.webp",
+      "altImage": "aurlius Website",
+      "link": "https://aurelius-six.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "dmc-team.webp",
+      "altImage": "dmc-team Website",
+      "link": "https://dmc-team.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "coupcreative.webp",
+      "altImage": "coup-creativity Website",
+      "link": "https://coup-creativity.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 17.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/124169757/African-Nation?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+    {
+      "title": "'Social Media'",
+      "image": "graphic design 16.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/124169363/EGS-2019?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+    {
+      "title": "'Vector Art'",
+      "image": "graphic design 1.webp",
+      "altImage": "The Food Court Website",
+      "link": "https://www.behance.net/gallery/124175093/some-veector-art?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 3.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/124172277/MANIPULATION?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 7.webp",
+      "altImage": "FCAI 25",
+      "link": "https://devahmedabdo.github.io/FCAI/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 21.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/163425787/chose-way",
+      "class": "graphic"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 9.webp",
+      "altImage": "QrCode Styling",
+      "link": "https://qr-code-neon-rho.vercel.app/",
+      "class": "web-design"
+    },
+
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 9.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144260823/MANUPULATION?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 5.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144260569/MANUPULATION?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 13.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/163424953/Kesaa",
+      "class": "graphic"
+    },
+    {
+      "title": "'Web Design'",
+      "image": "web design 10.webp",
+      "altImage": "QrCode Styling",
+      "link": "https://qr-code-neon-rho.vercel.app/",
+      "class": "web-design"
+    },
+    {
+      "title": "'Logo Design'",
+      "image": "graphic design 4.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/124171847/_?tracking_source=project_owner_other_projects",
+      "class": "graphic"
+    },
+    {
+      "title": "'CV Design'",
+      "image": "cv writing 1.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144260441/cv-design?",
+      "class": "cv"
+    },
+
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 20.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/163424979/convoys-12",
+      "class": "graphic"
+    },
+    {
+      "title": "'Tshirt Design'",
+      "image": "graphic design 14.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144259801/micro-chemistry-tshirt?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Tshirt Design'",
+      "image": "graphic design 18.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/144259969/special-chemistry-tshirt?",
+      "class": "graphic"
+    },
+    {
+      "title": "'Manipulation Art'",
+      "image": "graphic design 19.webp",
+      "altImage": "Graphic Design image",
+      "link": "https://www.behance.net/gallery/163425185/convoys-14",
+      "class": "graphic"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML5",
+      "icon": "fa-brands fa-html5"
+    },
+    {
+      "name": "CSS3",
+      "icon": "fa-brands fa-css3-alt"
+    },
+    {
+      "name": "JS",
+      "icon": "fa-brands fa-square-js"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "fa-brands fa-bootstrap"
+    },
+    {
+      "name": "TailwindCSS",
+      "icon": "fa-solid fa-water"
+    },
+    {
+      "name": "SASS",
+      "icon": "fa-brands fa-sass"
+    },
+    {
+      "name": "Angular",
+      "icon": "fa-brands fa-angular"
+    },
+    {
+      "name": "Node",
+      "icon": "fa-brands fa-node"
+    },
+    {
+      "name": "MongooDB",
+      "icon": "fa-solid fa-database"
+    },
+    {
+      "name": "Github",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "name": "Git",
+      "icon": "fa-brands fa-git-alt"
+    },
+    {
+      "name": "CMD",
+      "icon": "fa-solid fa-terminal"
+    }
+  ]
+}
