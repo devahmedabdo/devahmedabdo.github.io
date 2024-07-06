@@ -222,7 +222,7 @@ req.onreadystatechange = async function () {
         let box = document.createElement("div");
         box.style = `--title:${ele.title}`;
         box.classList.add("dReveal", "portfolio-box", `${ele.class}`);
-        box.innerHTML = `<img  src="images/works/${ele.image}" alt="${ele.altImage}" />
+        box.innerHTML = `<img  loading="lazy"  src="images/works/${ele.image}" alt="${ele.altImage}" />
         <div class="view">
           <lord-icon src="https://cdn.lordicon.com/zbopvjaq.json" trigger="loop" delay="1000"
             colors="primary:#f8fcfc,secondary:#f8fcfc" style="width: 100px; height: 100px">
