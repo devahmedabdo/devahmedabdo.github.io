@@ -1,0 +1,34 @@
+{
+  "experiences": [],
+  "skills": [],
+  "services": [],
+  "testimonials": [],
+  "projects": {
+    "items": [],
+    "pagination": {
+      "page": 1,
+      "total": 1000000,
+      "limit": 1
+    }
+  },
+  "info": {
+    "description": "connector GST15I2S B1 ZR1W WS. Articlenr. 91.921.3053.0. gesis® MINI connector, number of poles 2, female, connection type screw connection, rated voltage 250 ...\n",
+    "project": "31",
+    "client": "21",
+    "experience": 0,
+    "contacts": [
+      {
+        "link": "asd",
+        "icon": "x"
+      },
+      {
+        "link": "aw",
+        "icon": "telegram"
+      }
+    ],
+    "cv": "https://devahmedabdo.github.io/files/Dev%20Ahmed%20Abdo.pdf",
+    "name": "Ahmed Abdo",
+    "img": "https://devahmedabdo.github.io/images/dev-ahmed-abdo.png",
+    "github": "devahmedabdo"
+  }
+}
